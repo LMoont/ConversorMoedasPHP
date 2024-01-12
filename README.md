@@ -2,6 +2,10 @@
 
 Este é um simples conversor de moedas implementado em PHP. A aplicação permite que o usuário informe um valor em Reais (R$) e realiza a conversão para Dólares Americanos (US$), utilizando a cotação em tempo real fornecida pelo Banco Central do Brasil.
 
+![conversor](https://github.com/LMoont/ConversorMoedasPHP/assets/116237450/20ddc888-25a2-4d7b-8525-25dce505f4ae)
+
+
+
 ## Como Usar
 
 1. Clone o repositório:
