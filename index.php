@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Moedas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
 </head>
 <body>
     <?php 
@@ -12,7 +13,7 @@
     ?>
     
     <header>
-    <h1>Conversor de Real (R$) <br> em Dólar (US$)</h1>
+    <h1>Conversor de Moedas</h1>
     </header>
     
     <main>
@@ -22,15 +23,16 @@
             <label for="reais">Quantos R$ você quer converter?</label>
             <input type="number" name="reais" id="idreais" min="1" step="0.01">
             
-            <?= '<p class="cotacao"><br>*Cotação em tempo real do <strong><a href="https://www.bcb.gov.br/" target="_blank">Banco Central</a></strong></p>';?>
+            <?= '<div class="cotacao"><br>*Cotação em tempo real do <strong><a href="https://www.bcb.gov.br/" target="_blank">Banco Central</a></strong></div>';?>
 
             <input type="submit" value="Converter">
+
         </form>
     </main>
 
     <section id="resultado">
 
-        <h2>Resultado da Conversão<br><br></h2>
+        <h2>Resultado da Conversão<br></h2>
 
         <p><?php 
             $inicio = date("m-d-Y", strtotime("-7 days"));
@@ -47,7 +49,9 @@
             if ($dados && isset($dados["value"][0]["cotacaoCompra"]) && $dados["value"][0]["cotacaoCompra"] != 0) {
                 $cotacao = $dados["value"][0]["cotacaoCompra"];
                 $dolar = $reais / $cotacao;
+                
                 echo "Seus <strong>R\$" . number_format($reais, 2, ",", ".") . "</strong> equivalem a <strong>US\$" . number_format($dolar, 2, ",", ".") . "</strong>";
+                
             } else {
                 echo "Não foi possível obter a taxa de câmbio atual.";
             }

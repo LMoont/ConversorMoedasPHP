@@ -1,15 +1,12 @@
 @charset "UTF-8";
 
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "ABeeZee", sans-serif;
     box-sizing: border-box;
 }
 
-/* ELEMENTOS DA INTERFACE */
-
 body {
-    background-color: #15142b;
-    background-image: linear-gradient(180deg, #372991, #15142b);
+    background-color: #26bf6b;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -20,41 +17,26 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-}
-
-header, main, section, article {
-    max-width: 700px;
+    margin-top: 40px;
 }
 
 header > h1 {
-    color: white;
+    color: rgb(255, 255, 255);
     text-shadow: 3px 3px 0px black;
-    text-align: center;
-    line-height: 1.5em;
-    font-size: 2.3em;
+    font-size: 50px;
 }
 
-main, section, article {
+main > h1 {
+    font-size: 40px;
+}
+
+section {
     background-color: white;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+    margin-bottom: 20px;
 }
-
-p {
-    text-align: center;
-    line-height: 0.5em;
-}
-
-h2, h3, h4 {
-    color: #372991;
-    margin: 0 0 10px 0;
-    font-size: 1.9em;
-    text-align: center;
-}
-
-/* ELEMENTOS DE FORMULÁRIO */
 
 form {
     background-color: rgba(55, 41, 145, 0.2);
@@ -65,8 +47,7 @@ form {
 form label {
     display: block;
     width: fit-content;
-    font-size: 0.9em;
-    font-weight: 100;
+    font-size: 1em;
     background-color: rgba(55, 41, 145, 0.2);
     padding: 3px 7px;
     margin-top: 10px;
@@ -74,78 +55,74 @@ form label {
     border-radius: 5px;
 }
 
-input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week] {
-    width: 100%;
+input[type=number] {
     padding: 12px 20px;
-    font-size: 1em;
+    width: 100%;
+    font-size: 1.2em;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
-  
+
 input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
-    font-size: 1em;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-  
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-input[type=reset] {
-    width: 100%;
-    background-color: #eb9903;
-    font-size: 1em;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=reset]:hover {
-    background-color: #c27013;
-}
-
-input[type=button], button {
-    width: 100%;
-    background-color: #372991;
-    font-size: 1em;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=button]:hover, button:hover {
-    background-color: #291f6c;
-}
-
-input[type=radio] + label, input[type=checkbox] + label {
+    padding: 10px 10px;
+    margin: 10px 0;
+    font-size: 1.6em;
+    background-color: #26BF26;
     display: inline-block;
-    font-size: 1em;
-    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
 }
 
-#resultado p {
+input[type=submit]:hover {
+    background-color: #1c8b1c;
+}
+
+
+
+main {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+}
+
+fieldset {
+    border: 0.5px dotted #372991;
+    background-color: #e2e1e1;
+    padding: 10px 45px;
+    align-items: center;
+    font-size: 20px;
+}
+
+ul > li {
+    line-height: 1.5;
+}
+
+p {
+    background-color: #e2e1e1;
     text-align: center;
     font-size: 1.1em;
+    margin-top: 10%;
+}
+
+#resultado > h2 {
+    font-size: 32px;
+    text-align: center;
+    margin: 10px 0;
 }
 
 .cotacao {
     font-size: 14px;
+    margin-top: 2px;
 } 
 
 .cotacao a {
@@ -157,3 +134,5 @@ input[type=radio] + label, input[type=checkbox] + label {
 .cotacao a:hover {
     color: blue;
 }
+
+
